@@ -2,7 +2,7 @@ const app = new Vue(
     {
         el: '#root',
         data:{
-            myInterval: setInterval(this.next, 3000),
+            myInterval: null,
             activeIndex: 0,
             arrSlides: [
                 {
@@ -54,7 +54,7 @@ const app = new Vue(
             }
         },
         created() {
-           setInterval(this.next, 3000);
+            this.myInterval = setInterval(this.next, 3000);
         }
     }
 );

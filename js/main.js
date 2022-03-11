@@ -50,7 +50,11 @@ const app = new Vue(
             },
             stop() {
                 clearInterval(this.myInterval)
-                console.log('prova')
+                console.log('stop')
+            },
+            start() {
+                setInterval(this.next, 3000);
+                console.log('start')
             }
         },
         created() {

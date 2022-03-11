@@ -46,10 +46,14 @@ const app = new Vue(
                 } else {
                     this.activeIndex--;
                 }
+            },
+            stop() {
+                clearInterval(this.myInterval)
+                console.log('prova')
             }
         },
         created() {
-            setInterval(this.next, 3000)
+           const myInterval= setInterval(this.next, 3000)
         }
     }
 );
